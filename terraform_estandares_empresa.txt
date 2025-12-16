@@ -1,0 +1,27 @@
+ESTÁNDARES GENERALES TERRAFORM – EMPRESA
+
+1. Proveedor y región
+- El proveedor cloud permitido es AWS
+- La región por defecto es eu-west-1 (Irlanda)
+- No se permite el uso de otras regiones salvo indicación explícita
+
+2. Versionado y buenas prácticas
+- Se recomienda definir el bloque required_providers
+- Se recomienda definir versiones mínimas de Terraform y del proveedor
+- El código debe ser claro y legible
+
+3. Etiquetado obligatorio
+- Todos los recursos deben incluir las siguientes etiquetas:
+  - Environment
+  - Owner
+- El valor por defecto de Environment es "dev"
+- El valor de Owner debe ser "platform-team"
+
+4. Seguridad
+- No se permite exponer recursos a internet por defecto
+- No se deben usar credenciales en texto plano
+- El acceso público debe indicarse explícitamente por el usuario
+
+5. Convenciones
+- Los nombres de los recursos deben ser descriptivos
+- El código debe seguir un formato estándar y consistente
