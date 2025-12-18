@@ -1,19 +1,46 @@
 RECURSOS TERRAFORM DISPONIBLES – AWS
 
+
+### RESOURCE_TYPE: COMPUTE | EC2
+
 RECURSO: aws_instance
+- Servicio: EC2
+- Tipo: compute
 - El sistema operativo debe ser Ubuntu 22.04
 - El tipo de instancia por defecto es t3.micro
 - No se debe asignar una IP pública salvo que se indique explícitamente
 - Se debe usar una clave SSH llamada "company-key"
 - El recurso debe incluir las etiquetas obligatorias
 
+
 RECURSO: aws_security_group
+- Servicio: EC2
+- Tipo: network-security
 - El grupo de seguridad debe tener una descripción clara
 - El acceso SSH (puerto 22) solo debe permitirse desde IPs conocidas
 - El acceso HTTP (puerto 80) solo debe habilitarse si se indica explícitamente
 - No se permiten reglas abiertas 0.0.0.0/0 por defecto
 
+
+
+### RESOURCE_TYPE: NETWORK | VPC
+
 RECURSO: aws_vpc
+- Servicio: VPC
+- Tipo: network
 - Usar un rango CIDR privado
 - Habilitar DNS support y DNS hostnames
 - El recurso debe incluir las etiquetas obligatorias
+
+
+
+### RESOURCE_TYPE: STORAGE | S3
+
+RECURSO: aws_s3_bucket
+- Servicio: S3
+- Tipo: storage
+- El bucket no debe ser público por defecto
+- Habilitar versionado
+- Usar cifrado SSE-S3 o SSE-KMS
+- El recurso debe incluir las etiquetas obligatorias
+
